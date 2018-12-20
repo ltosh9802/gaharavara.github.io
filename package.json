@@ -1,0 +1,22 @@
+{
+  "name": "asociton.github.io",
+  "version": "1.0.0",
+  "description": "responsive potfolio\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Cr\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dt\u001b[C\u001b[C\u001b[D\u001b[D\u001b[2~folio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AsociTon/AsociTon.github.io.git"
+  },
+  "author": "AsociTon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AsociTon/AsociTon.github.io/issues"
+  },
+  "homepage": "https://github.com/AsociTon/AsociTon.github.io#readme",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
