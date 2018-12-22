@@ -1,5 +1,9 @@
 $primary-home-color: #000000;
 $home-opacity: 0.82;
+
+@mixin easeout {
+    transition: all 0.5s ease-out;
+}
 *html{
     margin: 0;
     padding: 0;
@@ -15,7 +19,9 @@ html{
 }
 
 body{
+    overflow: hidden;
     background: url(../bg-mob.png);
+    background-attachment: fixed;
     background-size: cover;
     z-index: -1;
     .overlayer{
@@ -39,18 +45,16 @@ body{
         line-height: 70px;
         color: rgba(white,0.8);
         z-index: 1;
-        //position: relative;
         .quote{
         width: 100%;
-        height: 35px;
-            background: rgba(#707070,0.2);
-        h6{
-            width: 100%;
-            color: white;
+        height: 35px;    
+        background: rgba(#707070,0.2);
             
+        h6{
+            color: white;
             line-height: 30px;
             font-size: 25px;
-            
+            z-index: 4;
             }
    
     
@@ -63,6 +67,7 @@ body{
             text-decoration-line: none;
             &:hover{
                 color: gray;
+                @include easeout;
             }
         }
     }
@@ -77,10 +82,11 @@ nav{
         position: absolute;
         top: 15px;
         right: 15px;
-        z-index: 2;
+        z-index: 3;
         &:hover{
             .btn-line{
                 background: gray;
+                @include easeout();
             }
             }
         
@@ -91,8 +97,59 @@ nav{
             height: 3px;
             background: white;
             margin: 5px;
+            transition: 1s;
             
             
         }
+        
+        .btn1-effect{
+                position: relative;
+                width :100vm;
+        }
+        .btn2-effect{
+            width: 30px;
+            height: 4px;
+        }
+        .btn3-effect{
+            transform: rotateZ(90deg);
+            width: 100vm;
+        }
     }
+    
+        .menu{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($primary-home-color,0);
+        z-index: 2;
+           
+        transition:all 2s;    
+        
+        ul{ 
+            color: rgba(white,0); 
+            margin-top: 20%;
+            margin-bottom:20%;
+            list-style-type: none;
+            
+            a{  display: none;
+                font-size: 50px;
+                font-weight: bold;
+                margin-left: 10%;
+                margin-right: 10%; 
+                line-height:60px;
+                
+            }
+        }
+    }
+    .menu_effect{
+        display: block;
+        background: rgba($primary-home-color,0.9);
+        color: rgba(white,0.7);
+        a{
+            display: block !important;
+        }
+    }
+
 }
