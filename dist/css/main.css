@@ -10,6 +10,10 @@
 html {
   font-family: "Ms PGothic"; }
 
+/* Removes the underlines and other default decorations from the link */
+a {
+  text-decoration: none; }
+
 /* Forms a layer of black color which is then lightened over the background image to create the overall background in case of HOME */
 body {
   overflow: hidden;
@@ -39,7 +43,7 @@ body {
   color: rgba(255, 255, 255, 0.8);
   z-index: 1;
   /* Sets the background of the quote written on home */
-  /* Sets the properties of the icons taken from Font-Awesome to blend in the home page */ }
+  /* Sets the properties for the icons taken from Font-Awesome to blend in the home page */ }
   .home-text .quote {
     width: 100%;
     height: 35px;
@@ -50,13 +54,14 @@ body {
       line-height: 30px;
       font-size: 25px;
       padding: 2px; }
-  .home-text .icons a {
-    color: rgba(112, 112, 112, 0.7);
-    line-height: 100px;
-    text-decoration-line: none; }
-    .home-text .icons a:hover {
-      color: gray;
+  .home-text .icons {
+    /* Sets properties for link to social media handles */ }
+    .home-text .icons a {
+      color: rgba(112, 112, 112, 0.7);
+      line-height: 100px;
       transition: all 0.5s ease-out; }
+      .home-text .icons a:hover {
+        color: gray; }
 
 nav .menu-btn {
   position: absolute;
@@ -83,6 +88,7 @@ nav .menu-btn {
     width: 100vm; }
 
 nav .menu {
+  display: none;
   position: absolute;
   top: 0;
   right: 0;

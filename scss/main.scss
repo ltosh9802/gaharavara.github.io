@@ -23,6 +23,12 @@ html{
     font-family: "Ms PGothic";
 }
 
+/* Removes the underlines and other default decorations from the link */
+
+a{
+    text-decoration: none;
+}
+
 /* Forms a layer of black color which is then lightened over the background image to create the overall background in case of HOME */  
 
 body{
@@ -59,7 +65,7 @@ body{
         @include rgba-color(white,0.8); // Gives the name color and opacity
         z-index: 1; // Makes it overlap the background layer so it is displayed correctly
     
-        /* Sets the background of the quote written on home */
+    /* Sets the background of the quote written on home */
     
     .quote{
         width: 100%;
@@ -77,16 +83,19 @@ body{
    
         }
     
-    /* Sets the properties of the icons taken from Font-Awesome to blend in the home page */
+    /* Sets the properties for the icons taken from Font-Awesome to blend in the home page */
     
     .icons{
+        
+        /* Sets properties for link to social media handles */
+        
         a{  
-            color: rgba(#707070,0.7);
+            @include rgba-color(#707070,0.7);
             line-height: 100px;
-            text-decoration-line: none;
+            @include easeout; // Gives the links an ease out transition effect on hovering
+            
             &:hover{
-                color: gray;
-                @include easeout;
+                @include rgba-color(gray,1); // Highlights the color of the handles  on hovering
             }
         }
     }
@@ -136,6 +145,7 @@ nav{
     }
     
         .menu{
+        display: none;    
         position: absolute;
         top: 0;
         right: 0;
