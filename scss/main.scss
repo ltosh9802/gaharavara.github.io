@@ -1,13 +1,19 @@
 $primary-home-color: #000000;
 $home-opacity: 0.82;
 
-@mixin easeout {
-    transition: all 0.5s ease-out;
+/* Sets the ease-out transition for the given element and time */
+
+@mixin easeout($element-given, $time-given) {
+    transition: $element-given $time-given ease-out;
 }
+
+/* Decides what color to use based on given color and opacity for the element */
 
 @mixin rgba-color($color-given, $opacity-given) {
     color: rgba($color-given, $opacity-given)
 }
+
+/* Gets rid of all the default stylings */
 
 *html{
     margin: 0;
@@ -92,69 +98,66 @@ body{
         a{  
             @include rgba-color(#707070,0.7);
             line-height: 100px;
-            @include easeout; // Gives the links an ease out transition effect on hovering
+            @include easeout(all, 0.5s); // Gives the links an ease out transition effect on hovering
             
             &:hover{
                 @include rgba-color(gray,1); // Highlights the color of the handles  on hovering
-            }
-        }
+                }            
+            }        
+        }    
     }
 
-        
-   
-    }
-
+/* Navigation bar present on the home along-with the layer that opens on clicking it and related properties */
  
 nav{    
-    .menu-btn{
-        position: absolute;
+    .menu-btn-before{
+        position: fixed; // Keeps the navigation bar fixed
         top: 15px;
-        right: 15px;
-        z-index: 3;
-        &:hover{
-            .btn-line{
-                background: gray;
-                @include easeout();
-            }
-            }
-        
+        right: 15px; // Values for where to fix the nav bar
+        z-index: 3; // Places the nav bar on the top of all the layers
+        /* Defines the properties of the button lines that are present on the menu icon */
         
         .btn-line{
-            
             width: 28px;
             height: 3px;
             background: white;
             margin: 5px;
-            transition: 1s;
-            
-            
+            @include easeout(all, 0.5s); // Gives transition effect on hovering
         }
-        
-        .btn1-effect{
-                position: relative;
-                width :100vm;
-        }
-        .btn2-effect{
-            width: 30px;
-            height: 4px;
-        }
-        .btn3-effect{
-            transform: rotateZ(90deg);
-            width: 100vm;
-        }
+
+        &:hover{
+            .btn-line{
+                background: gray; // Highlights all the button lines on hovering
+                }
+            }                
     }
     
-        .menu{
+    .menu-btn-after{
+        z-index: 0;
+        position: fixed;
+            
+        #btn1{
+            top: 15px;
+            right: 15px;
+            width: 100%;
+            height: 3px;
+        }
+        
+    }
+    
+    /* The menu layer that appears on clicking the menu button */
+    
+    .menu{
         display: none;    
         position: absolute;
         top: 0;
         right: 0;
         width: 100%;
         height: 100%;
-        background: rgba($primary-home-color,0);
+        background: rgba($primary-home-color, 0);
         z-index: 2;
-           
-        transition:all 2s;    
+        @include easeout(all, 1s);   
+        //transition:all 2s;    
         
         ul{ 
             color: rgba(white,0); 
