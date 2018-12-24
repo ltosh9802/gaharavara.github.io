@@ -4,6 +4,11 @@ $home-opacity: 0.82;
 @mixin easeout {
     transition: all 0.5s ease-out;
 }
+
+@mixin rgba-color($color-given, $opacity-given) {
+    color: rgba($color-given, $opacity-given)
+}
+
 *html{
     margin: 0;
     padding: 0;
@@ -18,48 +23,62 @@ html{
     font-family: "Ms PGothic";
 }
 
+/* Forms a layer of black color which is then lightened over the background image to create the overall background in case of HOME */  
+
 body{
-    overflow: hidden;
-    background: url(../bg-mob.png);
-    background-attachment: fixed;
-    background-size: cover;
-    z-index: -1;
-    .overlayer{
-        position: absolute;
+    overflow: hidden; // Hides the scrollbar for the browser
+    background: url(../bg-mob.png); // By default includes the background img for small devices
+    background-attachment: fixed; // Keeps the background image fixed
+    background-size: cover; // Makes the image cover the whole background despite of it's size
+    z-index: -1; // Gets the background layer to the bottom (i.e. away from the user)
+    
+    /* Adds a pseudo element after the background image, that is our layer of black color */
+    
+    &:after{
+        content: ''; // Since, no content is needed on the background layers
+        position: absolute; //Gets the layer out of the flow of the page
         top: 0;
         right: 0;
         width: 100%;
-        height: 100%; 
-        z-index: 1;
-        background: rgba($primary-home-color,$home-opacity);
+        height: 100%; // Lets it expand over our background image
+        background: rgba($primary-home-color, $home-opacity);
         background-size: cover;
     }
 
 }
+
+/* The home-text section is everything that we display on our homepage */
+
 .home-text{
-        font-size: 55px;
-        position: absolute;
-        top: 23%;
+        font-size: 55px; // The font-size for name
+        position: fixed; // Keeps it fixed on the set location
+        top: 25%;
         left: 10%;
-        bottom:23%;
-        line-height: 70px;
-        color: rgba(white,0.8);
-        z-index: 1;
-        .quote{
+        bottom:25%;
+        line-height: 70px; // Gives proper spacing between the individual lines
+        @include rgba-color(white,0.8); // Gives the name color and opacity
+        z-index: 1; // Makes it overlap the background layer so it is displayed correctly
+    
+        /* Sets the background of the quote written on home */
+    
+    .quote{
         width: 100%;
         height: 35px;    
         background: rgba(#707070,0.2);
+            
+        /* Sets the properties of the text inside the quote div */    
             
         h6{
             color: white;
             line-height: 30px;
             font-size: 25px;
-            z-index: 4;
+            padding: 2px;
             }
    
+        }
     
-            }
-            
+    /* Sets the properties of the icons taken from Font-Awesome to blend in the home page */
+    
     .icons{
         a{  
             color: rgba(#707070,0.7);
