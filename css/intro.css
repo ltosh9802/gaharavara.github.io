@@ -1,0 +1,44 @@
+#intro-part{
+    text-align: center;
+}
+.signature1 {
+    display: inline-block;
+    position: fixed;
+    top: 34%;
+    font-size: 400%;
+    font-family: 'Pacifico', cursive;
+}
+
+.signature2 {
+    font-family: 'Teko', sans-serif;
+}
+
+.dropdown {
+    position: fixed;
+    display: inline-block;
+    top: 90%;
+}
+
+.dropdown img{
+    height: 71px;
+}
+.mypic {
+    position: absolute;
+}
+.mypic img {
+    z-index: -1;
+    position: fixed;
+    float: left;
+}
+
+.shade {
+    position: absolute;
+    z-index: 0;
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.32);
+}
+

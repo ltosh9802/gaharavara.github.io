@@ -17,10 +17,12 @@ html {
 a {
   text-decoration: none; }
 
+#prime-part {
+    display: none;
+}
+
 /* Forms a layer of black color which is then lightened over the background image to create the overall background in case of HOME */
 body {
-  overflow: hidden;
-  background: url(../bg-mob.png);
   background-attachment: fixed;
   background-size: cover;
   z-index: -1;
@@ -32,7 +34,7 @@ body {
     right: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.82);
+    background: rgba(0, 0, 0, 0);
     background-size: cover; }
 
 /* The home-text section is everything that we display on our homepage */
