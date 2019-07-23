@@ -1,11 +1,14 @@
 #intro-part{
     text-align: center;
 }
-.signature1 {
+
+#signature {
     display: inline-block;
     position: fixed;
     top: 34%;
     font-size: 400%;
+}
+.signature1 {
     font-family: 'Pacifico', cursive;
 }
 

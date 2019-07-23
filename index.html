@@ -72,41 +72,23 @@
         </div>
         </div>
         <script type="text/javascript">
+              alert("changing signautre");
             var bool_signature = true;
             var signature = document.getElementById("signature");
-            function signatureFunction() {
-                alert("changing signautre");
-                signature.className = signature.className.replace(/\bsignature1\b/g, "signature2");
-            }
-            signatureFunction();
-            var show = false;
-            var menu-btn = document.getElementById("menu-btn");
-            var menu-btn-before = document.getElementsByClassName("menu-btn-before")[0];
-            var menu = document.getElementsByClassName("menu")[0];
-            var btn1 = document.getElementById("btn1");
-            var btn2 = document.getElementById("btn2");
-            var btn3 = document.getElementById("btn3");
-            menu-btn.addEventListener("click",function(event){
-                 if(show){
-                    
-                    menu-btn.classList.remove("menu_effect");
-                     btn1.classList.remove("btn1-effect");
-                     btn2.classList.remove("btn2-effect");
-                     btn3.classList.remove("btn3-effect");
-                    show=false;
-                }else{
-                   
-                   menu-btn.classList.add("menu-btn-after");
-                    menu-btn.classList.remove("menu-btn-before");
-                    menu.classList.add("menu_effect");
-                    btn1.classList.add("btn1-effect");
-                    btn2.classList.add("btn2-effect");
-                    btn3.classList.add("btn3-effect");
-                    show=true;
+            function changeSignature(){
+                
+                if(bool_signature==true){
+                    signature.className = signature.className.replace(/\bsignature1\b/g, "signature2");
+                signature.innerHTML = "गहरवार";
+                bool_signature = false;
                 }
-
-             });
-
+                else{
+                    signature.innerHTML = "gaharavar";
+                    signature.className = signature.className.replace(/\bsignature2\b/g, "signature1");
+                    bool_signature = true;
+                }
+            }
+            setInterval(changeSignature,1000);
         </script>    
     </body>
 </html>
