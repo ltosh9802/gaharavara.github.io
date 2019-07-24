@@ -12,7 +12,8 @@
         <title>Welcome</title>
         
     </head>
-    <body>   
+    <body class="home-page-body">
+        <div id="home-page">
         <header>
             <nav>
                 <div class="menu-btn-before" id="menu-btn">
@@ -49,9 +50,10 @@
                 </a>
             </div>      
         </div>
-         
+        </div>
         <script type="text/javascript">
-            var show = false;
+            alert("yeah js is on");
+            /*var show = false;
             var menu-btn = document.getElementById("menu-btn");
             var menu-btn-before = document.getElementsByClassName("menu-btn-before")[0];
             var menu = document.getElementsByClassName("menu")[0];
@@ -78,7 +80,26 @@
                 }
 
              });
-
+             */
+            
+            // NavBar Magic
+            var home_visible = true;
+            function reset_home(){
+                if(home_visible){
+                    document.getElementById("home-page").style.display = "none";
+                    document.getElementsByTagName("body").style = "none";
+                    home_visible = false;
+                } else {
+                    document.getElementById("home-page").style.display = "block";
+                    home_visible = true;
+                }
+            }
+            var menu_btn = document.getElementById("menu-btn");
+            menu_btn.addEventListener("click",function(){
+                    alert("clicked menu OOps");
+                reset_home();
+            });
+            
         </script>    
     </body>
 </html>
