@@ -1,8 +1,6 @@
 # gaharavara.github.io
 
-Trying to follow the below guidlines for getting better at sassig up the code.
-https://sass-guidelin.es/
-
+Building My Own Portfolio Site, Open to any suggestions.
 Contents to be added are:
 
   * Languages and Frameworks I am comfortable with
