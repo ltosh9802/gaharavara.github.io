@@ -30,7 +30,7 @@ body {
     /* Adds a pseudo element after the background image, that is our layer of black color */
 }
 
-.abody:after {
+body:after {
     content: '';
     position: absolute;
     top: 0;
@@ -39,6 +39,11 @@ body {
     height: 100%;
     background: rgba(0, 0, 0, 0.82);
     background-size: cover;
+}
+
+.no-after:after {
+    display: none;
+    content: none;
 }
 
 /* The home-text section is everything that we display on our homepage */
