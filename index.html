@@ -17,6 +17,7 @@
 </head>
 
 <body>
+
     <div id="home-page">
         <header>
             <nav>
@@ -47,8 +48,9 @@
             </div>
         </div>
     </div>
+
     <div id="intro-part">
-        <div class="minimize-nav"><a href="https://gaharavara.github.io">-</a></div>
+        <div class="minimize-nav" id="intro-nav"><a href="https://gaharavara.github.io">-</a></div>
         <div class="intro1">
             <div id="signature" class="signature1">
                 Hi, I am
@@ -75,12 +77,9 @@
                 </div>
             </div>
         </div>
-
     </div>
     <script src="mgGlitch.min.js"></script>
     <script type="text/javascript">
-        alert("yeah js is on");
-
         // NavBar Magic
         var home_visible = true;
 
@@ -101,7 +100,6 @@
         }
         var menu_btn = document.getElementById("menu-btn");
         menu_btn.addEventListener("click", function() {
-            alert("clicked menu OOpks");
             reset_home();
         });
 

@@ -27,30 +27,6 @@ body {}
     background: #7f8c8d;
 }
 
-.minimize-nav a {
-    text-decoration: none;
-}
-
-.minimize-nav a:visited {
-    color: white;
-}
-
-nav .minimize-nav {
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    right: 3%;
-    font-size: 400%;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-
-}
-
-nav .minimze-nav:hover {
-    color: #8e44ad;
-}
-
 #signature {
     display: inline-block;
     position: fixed;
@@ -84,7 +60,9 @@ nav .minimze-nav:hover {
     position: absolute;
     z-index: 2;
     display: inline-block;
-    left: 47.87%;
+    left: 50%;
+    margin-left: -32px;
+    margin-top: 4px;
     top: 90%;
     font-size: 400%;
     color: #ecf0f1;
@@ -95,11 +73,11 @@ nav .minimze-nav:hover {
     color: #8e44ad;
 }
 
-#intro-part a:visited {
+.contents a:visited {
     color: #f1c40f;
 }
 
-#intro-part a:active {
+.contents a:active {
     color: #8e44ad;
 }
 
@@ -118,7 +96,30 @@ nav .minimze-nav:hover {
     transition: all 0.5s ease-out;
 }
 
-#intro-part .intro2 .contents a:hover {
+.contents a:hover {
+    color: #8e44ad;
+}
+
+.minimize-nav {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 3%;
+    font-size: 400%;
+    font-weight: bold;
+    color: white;
+
+}
+
+.minimize-nav a {
+    text-decoration: none;
+}
+
+.minimize-nav a:visited {
+    color: white;
+}
+
+#intro-nav a:hover {
     color: #8e44ad;
 }
 
@@ -157,16 +158,4 @@ nav .minimze-nav:hover {
     bottom: 0;
     max-width: 25.5%;
     max-height: 25%;
-}
-
-.shade {
-    z-index: 2;
-    position: fixed;
-    top: 24%;
-    right: 50%;
-    bottom: 25%;
-    width: 50%;
-    height: 50%;
-    background: rgba(44, 62, 80, 0.71);
-
 }
