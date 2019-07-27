@@ -23,7 +23,7 @@ a {
 /* Forms a layer of black color which is then lightened over the background image to create the overall background in case of HOME */
 body {
     overflow: hidden;
-    background: url('../bg-mob.png');
+    background: url('../static/bg-mob.png');
     background-attachment: fixed;
     background-size: cover;
     z-index: -1;
@@ -55,7 +55,7 @@ body:after {
     bottom: 25%;
     line-height: 70px;
     color: rgba(255, 255, 255, 0.8);
-    z-index: 1;
+    z-index: 3;
     /* Sets the background of the quote written on home */
     /* Sets the properties for the icons taken from Font-Awesome to blend in the home page */
 }
