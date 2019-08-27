@@ -14,19 +14,22 @@
     bottom: 0;
     left: 0;
     right: 50%;
-    background: #ecf0f1;
+    background: url(../static/interlaced.png);
     font-family: "Montserrat";
     color: black;
 }
 
 .intro1 h1 {
-    font-size: 200%;
+    font-size: 277%;
+    font-weight: 800;
 }
  .intro1 .about-me {
      position: absolute;
-     top: 15%;
+     top: 10%;
      line-height: 150%;
-     padding: 0% 5%; 
+     padding: 2% 3%;
+     margin: 0% 4%;
+     background: white;
  }
 .row {
     display: flex;
@@ -112,7 +115,7 @@
 }
 
 .dropdown:hover {
-    color: #8e44ad;
+    color: #000000;
 }
 
 .contents a:visited {
@@ -162,7 +165,8 @@
 }
 
 #intro-nav a:hover {
-    color: #8e44ad;
+    color: #003366;
+    color: #003366;
 }
 
 .container {
