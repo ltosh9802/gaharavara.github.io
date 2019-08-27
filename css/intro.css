@@ -1,4 +1,3 @@
-body {}
 
 #intro-part {
     position: absolute;
@@ -15,7 +14,53 @@ body {}
     bottom: 0;
     left: 0;
     right: 50%;
-    background: rgba(52, 152, 219, 1.0);
+    background: url(../static/interlaced.png);
+    font-family: "Montserrat";
+    color: black;
+}
+
+.intro1 h1 {
+    font-size: 277%;
+    font-weight: 800;
+}
+ .intro1 .about-me {
+     position: absolute;
+     top: 10%;
+     line-height: 150%;
+     padding: 2% 3%;
+     margin: 0% 4%;
+     background: white;
+ }
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px; 
+}
+
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%; 
+}
+
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+        .column {
+            flex: 100%;
+            max-width: 100%;
+          }
 }
 
 .intro2 {
@@ -53,7 +98,7 @@ body {}
     left: 0%;
     right: 0%;
     bottom: 10%;
-    border-right: 5px inset #ecf0f1;
+    border-right: 5px inset #003366;
 }
 
 .dropdown {
@@ -65,12 +110,12 @@ body {}
     margin-top: 4px;
     top: 90%;
     font-size: 400%;
-    color: #ecf0f1;
+    color: #003366;
     transition: all 0.5s ease-out;
 }
 
 .dropdown:hover {
-    color: #8e44ad;
+    color: #000000;
 }
 
 .contents a:visited {
@@ -97,7 +142,7 @@ body {}
 }
 
 .contents a:hover {
-    color: #8e44ad;
+    color: #003366;
 }
 
 .minimize-nav {
@@ -107,7 +152,7 @@ body {}
     right: 3%;
     font-size: 400%;
     font-weight: bold;
-    color: white;
+    color: #f1c40f;
 
 }
 
@@ -116,11 +161,12 @@ body {}
 }
 
 .minimize-nav a:visited {
-    color: white;
+    color: #f1c40f;
 }
 
 #intro-nav a:hover {
-    color: #8e44ad;
+    color: #003366;
+    color: #003366;
 }
 
 .container {
