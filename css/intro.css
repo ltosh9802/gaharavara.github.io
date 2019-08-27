@@ -13,7 +13,51 @@
     top: 0;
     bottom: 0;
     left: 0;
-    right: 50%;    
+    right: 50%;
+    background: #ecf0f1;
+    font-family: "Montserrat";
+    color: black;
+}
+
+.intro1 h1 {
+    font-size: 200%;
+}
+ .intro1 .about-me {
+     position: absolute;
+     top: 15%;
+     line-height: 150%;
+     padding: 0% 5%; 
+ }
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px; 
+}
+
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%; 
+}
+
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+        .column {
+            flex: 100%;
+            max-width: 100%;
+          }
 }
 
 .intro2 {
@@ -51,7 +95,7 @@
     left: 0%;
     right: 0%;
     bottom: 10%;
-    border-right: 5px inset #ecf0f1;
+    border-right: 5px inset #003366;
 }
 
 .dropdown {
@@ -63,7 +107,7 @@
     margin-top: 4px;
     top: 90%;
     font-size: 400%;
-    color: #ecf0f1;
+    color: #003366;
     transition: all 0.5s ease-out;
 }
 
@@ -95,7 +139,7 @@
 }
 
 .contents a:hover {
-    color: #8e44ad;
+    color: #003366;
 }
 
 .minimize-nav {
@@ -105,7 +149,7 @@
     right: 3%;
     font-size: 400%;
     font-weight: bold;
-    color: white;
+    color: #f1c40f;
 
 }
 
@@ -114,7 +158,7 @@
 }
 
 .minimize-nav a:visited {
-    color: white;
+    color: #f1c40f;
 }
 
 #intro-nav a:hover {
