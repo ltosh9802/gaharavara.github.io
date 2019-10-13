@@ -8,6 +8,11 @@ Contents to be added are:
   * Hackathons
   * Internships
 
+    Well, the website looks great! If you add a few more things then it'll be complete :)
+    Some of them are:
+  * Awards and accomplishments
+  * Soft skills 
+
 > Will Be Refactoring A lot!
 
 @gaharavara
