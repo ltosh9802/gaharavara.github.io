@@ -7,9 +7,6 @@ Contents to be added are:
   * Works (Projects, Resume)
   * Hackathons
   * Internships
-
-    Well, the website looks great! If you add a few more things then it'll be complete :)
-    Some of them are:
   * Awards and accomplishments
   * Soft skills 
 
